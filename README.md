@@ -1,5 +1,45 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Vg2EF-QZ)
-# 🚀 Trabajo Práctico: Sistema de Gestión de Biblioteca con Spring Framework
+# 🚀 Sistema de Gestión de Biblioteca
+
+Sistema de gestión de biblioteca desarrollado con Spring Boot para el Trabajo Práctico 4 de Programación II.
+
+## Información del Alumno
+- **Nombre y Apellido**: Agustin Benavidez
+- **Legajo**: 62344
+
+## Requisitos
+
+- Java 21
+- Maven 3.9.0 o superior
+- Spring Boot 3.4.5
+
+## Configuración
+
+Para compilar y ejecutar el proyecto:
+
+```bash
+mvn clean install
+mvn spring-boot:run
+```
+
+## Funcionalidades
+
+- Gestión de libros
+- Gestión de usuarios
+- Gestión de préstamos
+
+## Estructura del Proyecto
+
+El proyecto sigue una arquitectura en capas:
+
+- **Modelos**: Entidades base del sistema
+- **Repositorios**: Acceso a datos
+- **Servicios**: Lógica de negocio
+- **Controladores**: API REST
+
+## Autor
+
+- Agustín Benavídez
 
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.4.5-green)
 ![Java](https://img.shields.io/badge/Java-21-orange)
@@ -117,10 +157,6 @@ Desarrollar un sistema de gestión de biblioteca utilizando Spring Framework, im
 - Testing y documentación: 5-7 horas
 
 > 💡 **Nota**: Esta estimación considera la experiencia adquirida en trabajos anteriores y la complejidad de implementar una arquitectura en capas con Spring Framework. El tiempo se ha ajustado considerando que no se requiere implementación de persistencia real.
-
-## 👨‍🎓 Información del Alumno
-- **Nombre y Apellido**: [Nombre y Apellido del Alumno]
-- **Legajo**: [Número de Legajo]
 
 ## 📋 Requisitos Previos
 
