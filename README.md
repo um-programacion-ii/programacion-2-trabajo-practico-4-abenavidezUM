@@ -37,6 +37,46 @@ El proyecto sigue una arquitectura en capas:
 - **Servicios**: Lógica de negocio
 - **Controladores**: API REST
 
+## API Endpoints
+
+### Libros
+
+- **GET /api/libros**: Obtener todos los libros
+- **GET /api/libros/{id}**: Obtener un libro por ID
+- **GET /api/libros/isbn/{isbn}**: Buscar libro por ISBN
+- **GET /api/libros/titulo/{titulo}**: Buscar libros por título
+- **GET /api/libros/autor/{autor}**: Buscar libros por autor
+- **GET /api/libros/estado/{estado}**: Buscar libros por estado
+- **POST /api/libros**: Crear un nuevo libro
+- **PUT /api/libros/{id}**: Actualizar un libro existente
+- **PATCH /api/libros/{id}/estado**: Cambiar el estado de un libro
+- **DELETE /api/libros/{id}**: Eliminar un libro
+
+### Usuarios
+
+- **GET /api/usuarios**: Obtener todos los usuarios
+- **GET /api/usuarios/{id}**: Obtener un usuario por ID
+- **GET /api/usuarios/email/{email}**: Buscar usuario por email
+- **GET /api/usuarios/nombre/{nombre}**: Buscar usuarios por nombre
+- **GET /api/usuarios/estado/{estado}**: Buscar usuarios por estado
+- **POST /api/usuarios**: Crear un nuevo usuario
+- **PUT /api/usuarios/{id}**: Actualizar un usuario existente
+- **PATCH /api/usuarios/{id}/estado**: Cambiar el estado de un usuario
+- **DELETE /api/usuarios/{id}**: Eliminar un usuario
+
+### Préstamos
+
+- **GET /api/prestamos**: Obtener todos los préstamos
+- **GET /api/prestamos/{id}**: Obtener un préstamo por ID
+- **GET /api/prestamos/usuario/{usuarioId}**: Buscar préstamos por usuario
+- **GET /api/prestamos/libro/{libroId}**: Buscar préstamos por libro
+- **GET /api/prestamos/fecha**: Buscar préstamos por fecha (parámetro: fecha)
+- **GET /api/prestamos/vencidos**: Obtener préstamos vencidos
+- **POST /api/prestamos**: Crear un nuevo préstamo (parámetros: usuarioId, libroId, fechaDevolucion)
+- **PATCH /api/prestamos/{id}/devolver**: Finalizar un préstamo (devolución)
+- **PATCH /api/prestamos/{id}/extender**: Extender la fecha de devolución (parámetro: nuevaFechaDevolucion)
+- **DELETE /api/prestamos/{id}**: Eliminar un préstamo
+
 ## Autor
 
 - Agustín Benavídez
