@@ -1,4 +1,85 @@
-# 🚀 Trabajo Práctico: Sistema de Gestión de Biblioteca con Spring Framework
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Vg2EF-QZ)
+# 🚀 Sistema de Gestión de Biblioteca
+
+Sistema de gestión de biblioteca desarrollado con Spring Boot para el Trabajo Práctico 4 de Programación II.
+
+## Información del Alumno
+- **Nombre y Apellido**: Agustin Benavidez
+- **Legajo**: 62344
+
+## Requisitos
+
+- Java 21
+- Maven 3.9.0 o superior
+- Spring Boot 3.4.5
+
+## Configuración
+
+Para compilar y ejecutar el proyecto:
+
+```bash
+mvn clean install
+mvn spring-boot:run
+```
+
+## Funcionalidades
+
+- Gestión de libros
+- Gestión de usuarios
+- Gestión de préstamos
+
+## Estructura del Proyecto
+
+El proyecto sigue una arquitectura en capas:
+
+- **Modelos**: Entidades base del sistema
+- **Repositorios**: Acceso a datos
+- **Servicios**: Lógica de negocio
+- **Controladores**: API REST
+
+## API Endpoints
+
+### Libros
+
+- **GET /api/libros**: Obtener todos los libros
+- **GET /api/libros/{id}**: Obtener un libro por ID
+- **GET /api/libros/isbn/{isbn}**: Buscar libro por ISBN
+- **GET /api/libros/titulo/{titulo}**: Buscar libros por título
+- **GET /api/libros/autor/{autor}**: Buscar libros por autor
+- **GET /api/libros/estado/{estado}**: Buscar libros por estado
+- **POST /api/libros**: Crear un nuevo libro
+- **PUT /api/libros/{id}**: Actualizar un libro existente
+- **PATCH /api/libros/{id}/estado**: Cambiar el estado de un libro
+- **DELETE /api/libros/{id}**: Eliminar un libro
+
+### Usuarios
+
+- **GET /api/usuarios**: Obtener todos los usuarios
+- **GET /api/usuarios/{id}**: Obtener un usuario por ID
+- **GET /api/usuarios/email/{email}**: Buscar usuario por email
+- **GET /api/usuarios/nombre/{nombre}**: Buscar usuarios por nombre
+- **GET /api/usuarios/estado/{estado}**: Buscar usuarios por estado
+- **POST /api/usuarios**: Crear un nuevo usuario
+- **PUT /api/usuarios/{id}**: Actualizar un usuario existente
+- **PATCH /api/usuarios/{id}/estado**: Cambiar el estado de un usuario
+- **DELETE /api/usuarios/{id}**: Eliminar un usuario
+
+### Préstamos
+
+- **GET /api/prestamos**: Obtener todos los préstamos
+- **GET /api/prestamos/{id}**: Obtener un préstamo por ID
+- **GET /api/prestamos/usuario/{usuarioId}**: Buscar préstamos por usuario
+- **GET /api/prestamos/libro/{libroId}**: Buscar préstamos por libro
+- **GET /api/prestamos/fecha**: Buscar préstamos por fecha (parámetro: fecha)
+- **GET /api/prestamos/vencidos**: Obtener préstamos vencidos
+- **POST /api/prestamos**: Crear un nuevo préstamo (parámetros: usuarioId, libroId, fechaDevolucion)
+- **PATCH /api/prestamos/{id}/devolver**: Finalizar un préstamo (devolución)
+- **PATCH /api/prestamos/{id}/extender**: Extender la fecha de devolución (parámetro: nuevaFechaDevolucion)
+- **DELETE /api/prestamos/{id}**: Eliminar un préstamo
+
+## Autor
+
+- Agustín Benavídez
 
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.4.5-green)
 ![Java](https://img.shields.io/badge/Java-21-orange)
@@ -116,10 +197,6 @@ Desarrollar un sistema de gestión de biblioteca utilizando Spring Framework, im
 - Testing y documentación: 5-7 horas
 
 > 💡 **Nota**: Esta estimación considera la experiencia adquirida en trabajos anteriores y la complejidad de implementar una arquitectura en capas con Spring Framework. El tiempo se ha ajustado considerando que no se requiere implementación de persistencia real.
-
-## 👨‍🎓 Información del Alumno
-- **Nombre y Apellido**: [Nombre y Apellido del Alumno]
-- **Legajo**: [Número de Legajo]
 
 ## 📋 Requisitos Previos
 
